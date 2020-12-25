@@ -6,30 +6,30 @@ function setup() {
   let width = windowWidth;
   let height = windowHeight;
   sayi1 = createInput();
-  sayi1.position(width * 0.1, height * 0.2);
+  sayi1.position(20, 50);
 
   sayi2 = createInput();
-  sayi2.position(width * 0.1, height * 0.35);
+  sayi2.position(20, 100);
 
 
   button = createButton('Hesapla');
-  button.position(width * 0.1, height * 0.45);
+  button.position(20, 140);
   button.mousePressed(greet);
 
-  txtSayi1 = createElement('h2', 'Sayı 1 giriniz');
-  txtSayi1.position(width * 0.1, height * 0.05);
+  txtSayi1 = createElement('h5', 'Sayı 1 giriniz');
+  txtSayi1.position(20, 0);
 
-  txtSayi2 = createElement('h2', 'Sayı 2 giriniz');
-  txtSayi2.position(width * 0.1, height * 0.20);
+  txtSayi2 = createElement('h5', 'tekrar sayısı');
+  txtSayi2.position(20, 60);
 
-  txtPowsum = createElement('h2', "").position(width * 0.27, height * 0.05);
-  Powsum = createElement('h2', "").position(width * 0.27, height * 0.14);
+  txtPowsum = createElement('h5', "").position(220, height * 0.05);
+  Powsum = createElement('h5', "").position(220, height * 0.14);
 
-  txtRepsum = createElement('h2', "").position(width * 0.27, height * 0.22);
-  Repsum = createElement('h2', "").position(width * 0.27, height * 0.31);
+  txtRepsum = createElement('h5', "").position(220, height * 0.22);
+  Repsum = createElement('h5', "").position(220, height * 0.31);
 
   
-  balon = createElement('h2').position(width * 0.5, height * 0.05);
+  balon = createElement('h5').position(400, height * 0.05);
 
 
 
@@ -41,7 +41,7 @@ function setup() {
 
 function greet() {
   fill(random(255),random(255),random(255))
-  text("abdullah_aruk",width*0.2,height*0.6)
+  text("abdullah_aruk",200,200)
   const s1 = sayi1.value();
   const s2 = sayi2.value();
   let ps = Math.pow(s1,s2);
@@ -60,16 +60,15 @@ function greet() {
   Powsum.html(ps + "  ( " +  powContainer + "  ) " );
   Repsum.html(ps + "  ( " +  addContainer + "  ) " );
 
-  Repsum.html(rs);
   balon.html("Fark = "+ abs(dist));
   if(counter % 0 == 0){
-    fill(0)
+    fill(random(255),random(255),random(255))
     counter++;
   }
   else{
-    fill(255)
+    fill(random(255),random(255),random(255))
     counter++;
   }
-  ellipse(width*0.76,height*0.5,dist*0.13,dist*0.13)
+  ellipse(200,140,dist*0.13,dist*0.13)
 
 }
