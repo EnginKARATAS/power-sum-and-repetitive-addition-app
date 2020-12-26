@@ -41,13 +41,13 @@ function setup() {
 
 function greet() {
   fill(random(255),random(255),random(255))
-  text("abdullah_aruk",200,200)
+  text("Engin Karataş",100,100)
   const s1 = sayi1.value();
   const s2 = sayi2.value();
   let ps = Math.pow(s1,s2);
   let rs = s1*s2;
   let dist = abs(ps-rs);
-  txtPowsum.html("Üstek Nitelik");
+  txtPowsum.html("Tekrarlı Çarpım");
   txtRepsum.html("Tekrarlı Toplama");
   let powContainer = '';
   let addContainer = '';
@@ -58,7 +58,7 @@ function greet() {
     addContainer +=  s1 + "+"
   }
   Powsum.html(ps + "  ( " +  powContainer + "  ) " );
-  Repsum.html(ps + "  ( " +  addContainer + "  ) " );
+  Repsum.html(rs + "  ( " +  addContainer + "  ) " );
 
   balon.html("Fark = "+ abs(dist));
   if(counter % 0 == 0){
